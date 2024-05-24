@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { AuthProvider, useAuth } from "./context/authContext";
+import Login from "./components/Login";
+import VehicleCatalog from "./components/Vehicles";
+import HomePage from "./components/HomePage";
+
+const PrivateRoute = ({ children }) => {
+  const { isAdmin } = useAuth();
+  return isAdmin ? children : <Navigate to="/login" />;
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/adicionar-veiculos"
+          element={
+            <PrivateRoute>
+              <VehicleCatalog />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 
