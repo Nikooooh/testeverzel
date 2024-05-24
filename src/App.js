@@ -19,7 +19,7 @@ function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Login />} />
         <Route
           path="/adicionar-veiculos"
           element={
