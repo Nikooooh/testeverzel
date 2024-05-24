@@ -12,7 +12,7 @@ import HomePage from "./components/HomePage";
 
 const PrivateRoute = ({ children }) => {
   const { isAdmin } = useAuth();
-  return isAdmin ? children : <Navigate to="/login" />;
+  return isAdmin ? children : <Navigate to="/admin" />;
 };
 
 function App() {
