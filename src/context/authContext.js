@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsAdmin(false);
-    navigate("/login");
+    navigate("/admin");
   };
 
   return (
