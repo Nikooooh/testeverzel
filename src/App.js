@@ -12,6 +12,7 @@ import HomePage from "./components/HomePage";
 
 const PrivateRoute = ({ children }) => {
   const { isAdmin } = useAuth();
+  console.log("PrivateRoute isAdmin:", isAdmin);
   return isAdmin ? children : <Navigate to="/admin" />;
 };
 

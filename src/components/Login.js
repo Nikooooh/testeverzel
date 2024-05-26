@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
+import api from "../api";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login(email, password);
+    try {
+      const response = await api.post("/admin/login", { email, password });
+      const { token } = response.data;
+      login(email, password, token);
+    } catch (error) {
+      alert("Credenciais inválidas");
+    }
   };
 
   return (
