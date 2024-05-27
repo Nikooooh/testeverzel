@@ -1,49 +1,67 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const VehicleCatalog = () => {
   const { logout } = useAuth();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
-    brand: "",
-    model: "",
-    photo: null,
+    nome: "",
+    marca: "",
+    modelo: "",
+    image: null,
   });
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevState) => ({
+      ...prevState,
       [name]: value,
-    });
-    setErrors({
-      ...errors,
-      [name]: "",
-    });
+    }));
   };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    setFormData({
-      ...formData,
-      photo: file,
-    });
+    setFormData((prevState) => ({
+      ...prevState,
+      image: file,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const formDataToSend = new FormData();
+    formDataToSend.append("nome", formData.nome);
+    formDataToSend.append("marca", formData.marca);
+    formDataToSend.append("modelo", formData.modelo);
+    formDataToSend.append("image", formData.image);
 
-    console.log(formData);
-    setFormData({
-      name: "",
-      brand: "",
-      model: "",
-      photo: null,
-    });
-    navigate("/");
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/admin/api/vehicles",
+        formDataToSend,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      if (response.status === 201) {
+        console.log("Veículo adicionado com sucesso:", response.data.vehicle);
+        setFormData({
+          nome: "",
+          marca: "",
+          modelo: "",
+          image: null, // Correto: image
+        });
+        navigate("/adicionar-veiculos");
+      } else {
+        console.error("Erro ao adicionar veículo:", response.data.message);
+      }
+    } catch (error) {
+      console.error("Erro ao adicionar veículo:", error.response.data.message);
+    }
   };
 
   return (
@@ -66,8 +84,8 @@ const VehicleCatalog = () => {
           </label>
           <input
             type="text"
-            name="name"
-            value={formData.name}
+            name="nome"
+            value={formData.nome}
             onChange={handleChange}
             className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
@@ -79,8 +97,8 @@ const VehicleCatalog = () => {
           </label>
           <input
             type="text"
-            name="brand"
-            value={formData.brand}
+            name="marca"
+            value={formData.marca}
             onChange={handleChange}
             className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
@@ -92,8 +110,8 @@ const VehicleCatalog = () => {
           </label>
           <input
             type="text"
-            name="model"
-            value={formData.model}
+            name="modelo"
+            value={formData.modelo}
             onChange={handleChange}
             className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
@@ -105,7 +123,7 @@ const VehicleCatalog = () => {
           </label>
           <input
             type="file"
-            name="photo"
+            name="image"
             onChange={handleFileChange}
             className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
