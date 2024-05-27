@@ -68,6 +68,7 @@ Documentação da API
 Configuração do Banco de Dados
 
     Configure as variáveis de ambiente no backend para se conectar ao banco de dados.
+    Banco de dados utilizado: Postgresql - PgAdmin4
 
 Contribuição
 
