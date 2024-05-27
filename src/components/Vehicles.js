@@ -10,6 +10,7 @@ const VehicleCatalog = () => {
     nome: "",
     marca: "",
     modelo: "",
+    preco: "", // Adicionando preco ao estado inicial
     image: null,
   });
 
@@ -35,6 +36,7 @@ const VehicleCatalog = () => {
     formDataToSend.append("nome", formData.nome);
     formDataToSend.append("marca", formData.marca);
     formDataToSend.append("modelo", formData.modelo);
+    formDataToSend.append("preco", formData.preco); // Incluindo preco nos dados enviados
     formDataToSend.append("image", formData.image);
 
     try {
@@ -53,6 +55,7 @@ const VehicleCatalog = () => {
           nome: "",
           marca: "",
           modelo: "",
+          preco: "", // Resetando preco no estado inicial
           image: null,
         });
         navigate("/adicionar-veiculos");
@@ -112,6 +115,20 @@ const VehicleCatalog = () => {
             type="text"
             name="modelo"
             value={formData.modelo}
+            onChange={handleChange}
+            className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700">
+            Preço
+          </label>
+          <input
+            type="number"
+            step="0.01"
+            name="preco"
+            value={formData.preco}
             onChange={handleChange}
             className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required

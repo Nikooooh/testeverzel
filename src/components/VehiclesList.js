@@ -64,6 +64,11 @@ const VehicleList = () => {
             <p>
               <strong>Modelo:</strong> {vehicle.modelo}
             </p>
+            <p>
+              {" "}
+              {/* Exibição do preço */}
+              <strong>Preço:</strong> R$ {vehicle.preco}
+            </p>
             <div className="flex mt-4">
               <Link
                 to={`/edit/${vehicle.id}`}
