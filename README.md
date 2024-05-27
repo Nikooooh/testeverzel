@@ -33,6 +33,13 @@ Funcionalidades
         Editar informações de carros existentes.
         Excluir carros da vitrine.
 
+    ATENÇÃO! JÁ TEM UM ADMIN CADASTRADO NO BANCO DE DADOS CUJO OS DADOS PARA LOGIN SÃO:
+
+        EMAIL: nicolastrevis@hotmail.com
+        SENHA: Senha123*
+
+        *CASO QUEIRA CADASTRAR UM NOVO ADMIN, UTILIZAR A ROTA /admin/register e enviando um JSON com 'name', 'email' e 'password'.
+
 Configuração do Projeto
 Frontend
 
