@@ -58,7 +58,7 @@ Backend
     Clone o repositório do backend para sua máquina local: https://github.com/Nikooooh/api_testeverzel
     Navegue até a pasta do backend: cd api_testeverzel
     Instale as dependências do projeto: npm install
-    Configure as variáveis de ambiente no arquivo .env (Nesse caso, já deixei configurado, não é necessário criar o arquivo .env!)
+    Configure as variáveis de ambiente no arquivo .env
     Inicie o servidor: npm start.
 
 Documentação da API
@@ -69,6 +69,24 @@ Configuração do Banco de Dados
 
     Configure as variáveis de ambiente no backend para se conectar ao banco de dados.
     Banco de dados utilizado: Postgresql - PgAdmin4
+
+    Adicionar um Novo Servidor:
+    Abra o pgAdmin 4.
+    No painel esquerdo, clique com o botão direito em "Servers" e selecione "Create" > "Server...".
+
+    Configurar a Conexão:
+    Na aba "General", forneça um nome para o servidor.
+    Na aba "Connection", insira os detalhes do seu servidor PostgreSQL:
+    Host name/address: O endereço IP público ou o nome de domínio do seu servidor.
+    Port: 5432 (ou a porta que você configurou).
+    Maintenance database: postgres (ou o nome do seu banco de dados).
+    Username: Seu nome de usuário do PostgreSQL.
+    Password: Sua senha do PostgreSQL.
+
+    Salvar a Configuração:
+    Clique em "Save" para salvar as configurações e conectar-se ao servidor.
+
+    DEIXEI UM .ENV DE EXEMPLO DO MEU SERVIDOR PARA VOCÊ CONFIGURAR NA SUA MÁQUINA.
 
 Contribuição
 
