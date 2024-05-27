@@ -37,7 +37,7 @@ const HomePage = () => {
         whileTap={{ scale: 0.9 }}
         className="bg-white text-lg hover:bg-gray-200 text-red-700 font-bold py-3 px-5 rounded-lg shadow-lg transition duration-300 ease-in-out"
       >
-        <Link to="/veiculos-usados">Ver Catálogo</Link>
+        <Link to="/catalogo-veiculos">Ver Catálogo</Link>
       </motion.button>
     </motion.div>
   );
