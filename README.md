@@ -15,6 +15,9 @@ Tecnologias Utilizadas
     Banco de Dados:
         PostgreSQL
 
+    Gerenciamento:
+        Git e Github
+
     Armazenamento de Imagens:
         AWS S3 (Bucket S3 para armazenar as imagens dos carros)
 
@@ -33,25 +36,27 @@ Funcionalidades
 Configuração do Projeto
 Frontend
 
-    Clone o repositório do frontend para sua máquina local: testeverzel.
-    Navegue até a pasta do frontend: cd testeverzel.
-    Instale as dependências do projeto: npm install.
-    Inicie o servidor de desenvolvimento: npm start.
+    Clone o repositório do frontend para sua máquina local: https://github.com/Nikooooh/testeverzel
+    Navegue até a pasta do frontend: cd testeverzel
+    Instale as dependências do projeto: npm install
+    Inicie o servidor de desenvolvimento: npm start
 
 Backend
 
-    Clone o repositório do backend para sua máquina local: api_testeverzel.
-    Navegue até a pasta do backend: cd api_testeverzel.
-    Instale as dependências do projeto: npm install.
-    Configure as variáveis de ambiente no arquivo .env.
+    Clone o repositório do backend para sua máquina local: https://github.com/Nikooooh/api_testeverzel
+    Navegue até a pasta do backend: cd api_testeverzel
+    Instale as dependências do projeto: npm install
+    Configure as variáveis de ambiente no arquivo .env
     Inicie o servidor: npm start.
 
 Configuração do Banco de Dados
-1 - Configure as variáveis de ambiente no backend para se conectar ao banco de dados.
+
+    Configure as variáveis de ambiente no backend para se conectar ao banco de dados.
 
 Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+    Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
 Licença
 
-Este projeto foi desenvolvido por Nicolas Trevisan.
+    Este projeto foi desenvolvido por Nicolas Trevisan.
