@@ -39,7 +39,7 @@ const VehicleCatalogPublic = () => {
         );
         const sortedVehicles = response.data.vehicles.sort(
           (a, b) => a.preco - b.preco
-        ); // Ordena os veículos por preço
+        );
         setVehicles(sortedVehicles);
       } catch (error) {
         console.error("Erro ao buscar veículos:", error.response.data.message);

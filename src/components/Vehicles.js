@@ -10,7 +10,7 @@ const VehicleCatalog = () => {
     nome: "",
     marca: "",
     modelo: "",
-    preco: "", // Adicionando preco ao estado inicial
+    preco: "",
     image: null,
   });
 
@@ -36,7 +36,7 @@ const VehicleCatalog = () => {
     formDataToSend.append("nome", formData.nome);
     formDataToSend.append("marca", formData.marca);
     formDataToSend.append("modelo", formData.modelo);
-    formDataToSend.append("preco", formData.preco); // Incluindo preco nos dados enviados
+    formDataToSend.append("preco", formData.preco);
     formDataToSend.append("image", formData.image);
 
     try {
@@ -55,7 +55,7 @@ const VehicleCatalog = () => {
           nome: "",
           marca: "",
           modelo: "",
-          preco: "", // Resetando preco no estado inicial
+          preco: "",
           image: null,
         });
         navigate("/adicionar-veiculos");
@@ -80,6 +80,7 @@ const VehicleCatalog = () => {
           Sair
         </button>
       </div>
+
       <form onSubmit={handleSubmit} className="max-w-md mt-20 mx-auto">
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">
@@ -152,15 +153,15 @@ const VehicleCatalog = () => {
         >
           Adicionar Veículo
         </button>
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => navigate("/veiculos")}
+            className="w-3/4 px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700"
+          >
+            Ver os Veículos Cadastrados
+          </button>
+        </div>
       </form>
-      <div className="mt-4">
-        <button
-          onClick={() => navigate("/veiculos")}
-          className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700"
-        >
-          Ir para Veículos Cadastrados
-        </button>
-      </div>
     </div>
   );
 };
