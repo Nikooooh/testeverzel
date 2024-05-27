@@ -53,7 +53,7 @@ const VehicleCatalog = () => {
           nome: "",
           marca: "",
           modelo: "",
-          image: null, // Correto: image
+          image: null,
         });
         navigate("/adicionar-veiculos");
       } else {
@@ -136,6 +136,14 @@ const VehicleCatalog = () => {
           Adicionar Veículo
         </button>
       </form>
+      <div className="mt-4">
+        <button
+          onClick={() => navigate("/veiculos")}
+          className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700"
+        >
+          Ir para Veículos Cadastrados
+        </button>
+      </div>
     </div>
   );
 };
