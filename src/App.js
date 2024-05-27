@@ -9,6 +9,8 @@ import { AuthProvider, useAuth } from "./context/authContext";
 import Login from "./components/Login";
 import VehicleCatalog from "./components/Vehicles";
 import HomePage from "./components/HomePage";
+import VehicleList from "./components/VehiclesList";
+import EditVehicle from "./components/EditVehicles";
 
 const PrivateRoute = ({ children }) => {
   const { isAdmin } = useAuth();
@@ -26,6 +28,22 @@ function App() {
           element={
             <PrivateRoute>
               <VehicleCatalog />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/veiculos"
+          element={
+            <PrivateRoute>
+              <VehicleList />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/edit/:id"
+          element={
+            <PrivateRoute>
+              <EditVehicle />
             </PrivateRoute>
           }
         />
