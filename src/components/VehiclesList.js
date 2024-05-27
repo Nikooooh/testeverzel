@@ -36,7 +36,7 @@ const VehicleList = () => {
 
   return (
     <div className="min-h-screen p-8 bg-white">
-      <h1 className="text-2xl font-bold text-blue-900 mb-6">
+      <h1 className="text-2xl font-semibold text-blue-900 mb-6">
         Veículos Cadastrados
       </h1>
       <div className="relative mb-6">
