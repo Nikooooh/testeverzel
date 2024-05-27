@@ -11,6 +11,7 @@ import VehicleCatalog from "./components/Vehicles";
 import HomePage from "./components/HomePage";
 import VehicleList from "./components/VehiclesList";
 import EditVehicle from "./components/EditVehicles";
+import VehicleCatalogPublic from "./components/VehiclesCatalogPublic";
 
 const PrivateRoute = ({ children }) => {
   const { isAdmin } = useAuth();
@@ -48,6 +49,7 @@ function App() {
           }
         />
         <Route path="/" element={<HomePage />} />
+        <Route path="/catalogo-veiculos" element={<VehicleCatalogPublic />} />
       </Routes>
     </AuthProvider>
   );
