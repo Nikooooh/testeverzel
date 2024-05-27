@@ -1,6 +1,9 @@
 Recayd Cars
 
 Este projeto é uma vitrine de carros onde os usuários podem visualizar carros cadastrados e os administradores podem realizar operações de cadastro, edição e exclusão de carros.
+
+Link para o vídeo mostrando o projeto: https://youtu.be/fyr_dDAZor8
+
 Tecnologias Utilizadas
 
     Frontend:
