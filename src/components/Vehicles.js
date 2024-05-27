@@ -48,7 +48,7 @@ const VehicleCatalog = () => {
         }
       );
       if (response.status === 201) {
-        console.log("Veículo adicionado com sucesso:", response.data.vehicle);
+        alert("Veículo adicionado com sucesso:");
         setFormData({
           nome: "",
           marca: "",
