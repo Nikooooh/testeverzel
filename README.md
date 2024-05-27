@@ -4,6 +4,8 @@ Este projeto é uma vitrine de carros onde os usuários podem visualizar carros 
 
 Link para o vídeo mostrando o projeto: https://youtu.be/fyr_dDAZor8
 
+Rota para documentação da API: /api-docs
+
 Tecnologias Utilizadas
 
     Frontend:
@@ -26,6 +28,13 @@ Tecnologias Utilizadas
 
 Funcionalidades
 
+    ATENÇÃO! JÁ TEM UM ADMIN CADASTRADO NO BANCO DE DADOS CUJO OS DADOS PARA LOGIN SÃO:
+
+    EMAIL: nicolastrevis@hotmail.com
+    SENHA: Senha123*
+
+    *CASO QUEIRA CADASTRAR UM NOVO ADMIN, UTILIZAR A ROTA /admin/register e enviando um JSON com 'name', 'email' e 'password'.
+
     Usuários:
         Visualizar carros cadastrados na vitrine.
         Pesquisar carros por nome, marca, modelo ou faixa de preço.
@@ -35,13 +44,6 @@ Funcionalidades
         Cadastrar novos carros na vitrine.
         Editar informações de carros existentes.
         Excluir carros da vitrine.
-
-    ATENÇÃO! JÁ TEM UM ADMIN CADASTRADO NO BANCO DE DADOS CUJO OS DADOS PARA LOGIN SÃO:
-
-        EMAIL: nicolastrevis@hotmail.com
-        SENHA: Senha123*
-
-        *CASO QUEIRA CADASTRAR UM NOVO ADMIN, UTILIZAR A ROTA /admin/register e enviando um JSON com 'name', 'email' e 'password'.
 
 Configuração do Projeto
 Frontend
