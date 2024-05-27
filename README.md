@@ -4,6 +4,8 @@ Este projeto é uma vitrine de carros onde os usuários podem visualizar carros 
 
 Link para o vídeo mostrando o projeto: https://youtu.be/fyr_dDAZor8
 
+Para cadastrar um novo admin, você pode acessar http://localhost:3000/cadastro
+
 Rota para documentação da API: /api-docs
 
 Tecnologias Utilizadas
@@ -28,12 +30,7 @@ Tecnologias Utilizadas
 
 Funcionalidades
 
-    ATENÇÃO! JÁ TEM UM ADMIN CADASTRADO NO BANCO DE DADOS CUJO OS DADOS PARA LOGIN SÃO:
-
-    EMAIL: nicolastrevis@hotmail.com
-    SENHA: Senha123*
-
-    *CASO QUEIRA CADASTRAR UM NOVO ADMIN, UTILIZAR A ROTA /admin/register e enviando um JSON com 'name', 'email' e 'password'.
+    Para cadastrar um novo admin, você pode acessar http://localhost:3000/cadastro
 
     Usuários:
         Visualizar carros cadastrados na vitrine.
