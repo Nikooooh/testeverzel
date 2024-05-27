@@ -64,6 +64,46 @@ Documentação da API
 
 Configuração do Banco de Dados
 
+    Pré-requisitos
+
+    - Node.js instalado (https://nodejs.org/)
+    - PostgreSQL instalado (https://www.postgresql.org/download/)
+    - pgAdmin 4 instalado (opcional, mas recomendado para administração do banco de dados) (https://www.pgadmin.org/download/)
+
+    1. Instale o PostgreSQL
+       - Baixe e instale o PostgreSQL a partir do (https://www.postgresql.org/download/).
+       - Durante a instalação, defina uma senha para o usuário 'postgres'.
+
+    2. Crie um Banco de Dados e um Usuário
+       - Abra o pgAdmin 4 e conecte-se ao servidor PostgreSQL local.
+       - Clique com o botão direito em "Databases" e selecione "Create" > "Database...".
+       - Nomeie o banco de dados como (escolha seu nome de DB).
+       - Clique com o botão direito em "Login/Group Roles" e selecione "Create" > "Login/Group Role...".
+       - Defina o nome do usuário e a senha.
+
+    3. Configurar Permissões
+       - Na aba "Privileges" do usuário, configure as permissões necessárias (CONNECT, CREATE, TEMPORARY, etc.).
+       - Assegure-se de que o usuário tenha permissões no seu banco de dados.
+
+    4. Configuração do Arquivo .env
+    
+       - Crie um arquivo '.env' na raiz do projeto com o seguinte conteúdo:
+         '''
+         DB_HOST=localhost (TAMBÉM É PADRÃO, MAS PODE SER DIFERENTE)
+         DB_PORT=PORTA (PADRÃO DO POSTGRES É 5432)
+         DB_USER=DB_USER
+         DB_PASSWORD=PASSWORD_DO_DB
+         DB_NAME=NOME_DO_DB
+         SESSION_SECRET=CHAVE_SECRETA
+         '''
+         
+         Tem um arquivo .env de exemplo no meu projeto!
+         
+    ## Problemas Comuns
+
+    - Erro de conexão: Verifique se o PostgreSQL está em execução e se as credenciais no arquivo '.env' estão corretas.
+    - Permissões negadas: Assegure-se de que o usuário tem as permissões adequadas no banco de dados.
+
     Configure as variáveis de ambiente no backend para se conectar ao banco de dados.
     Banco de dados utilizado: Postgresql - PgAdmin4
 
