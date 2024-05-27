@@ -46,7 +46,7 @@ Backend
     Clone o repositório do backend para sua máquina local: https://github.com/Nikooooh/api_testeverzel
     Navegue até a pasta do backend: cd api_testeverzel
     Instale as dependências do projeto: npm install
-    Configure as variáveis de ambiente no arquivo .env (Nesse caso, já deixei configurado. Não está no gitignore.)
+    Configure as variáveis de ambiente no arquivo .env (Nesse caso, já deixei configurado, não é necessário criar o arquivo .env!)
     Inicie o servidor: npm start.
 
 Documentação da API
