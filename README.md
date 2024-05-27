@@ -49,6 +49,10 @@ Backend
     Configure as variáveis de ambiente no arquivo .env
     Inicie o servidor: npm start.
 
+Documentação da API
+
+    Para explorar a documentação completa da API, acesse localhost:8000/api-docs
+
 Configuração do Banco de Dados
 
     Configure as variáveis de ambiente no backend para se conectar ao banco de dados.
