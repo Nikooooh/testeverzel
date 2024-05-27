@@ -248,13 +248,13 @@ const VehicleCatalogPublic = () => {
               />
               <div className="p-4">
                 <h2 className="text-xl font-semibold mb-2">{vehicle.nome}</h2>
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-700 mb-2">
                   <strong>Marca:</strong> {vehicle.marca}
                 </p>
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-700 mb-2">
                   <strong>Modelo:</strong> {vehicle.modelo}
                 </p>
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-700 mb-2">
                   <strong>Preço:</strong> R$ {vehicle.preco}
                 </p>
                 <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md">
