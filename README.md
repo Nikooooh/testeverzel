@@ -4,6 +4,8 @@ Este projeto é uma vitrine de carros onde os usuários podem visualizar carros 
 
 Link para o vídeo mostrando o projeto: https://youtu.be/fyr_dDAZor8
 
+Link para a documentação do software: https://drive.google.com/file/d/1nHQ4MPFnRGOdPJL3Eaq-QBlYvHZOyzCc/view?usp=sharing
+
 Para cadastrar um novo admin, você pode acessar http://localhost:3000/cadastro
 
 Rota para documentação da API: /api-docs
